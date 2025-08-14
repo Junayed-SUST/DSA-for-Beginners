@@ -33,12 +33,20 @@ Given a sorted array of integers and a target value, find the indices (1-based) 
 **Input**: 
 ```plaintext
 numbers = [2, 7, 11, 15], target = 9
-Output: [1, 2]
-_Explanation_: 2 + 7 = 9, and those are at indices 1 and 2 (1-based).
-## Another Example (Try This Yourself!)
-
-Input: numbers = [1, 3, 4, 6, 8, 10], target = 14
+**Output**:
+[1, 2]
+Explanation:
+2 + 7 = 9, and those are at indices 1 and 2 (1-based).
+Another Example (Try This Yourself!)
+numbers = [1, 3, 4, 6, 8, 10], target = 14
 What should the output be? Grab a pen and paper before reading on!
 Pause and Solve
 
 Take a moment to try solving this on your own before reading the solution.
+Time Complexity:
+
+O(n) where n is the number of elements in the array. We are only iterating through the array once.
+
+Space Complexity:
+
+O(1) because no extra space is used except for the two pointers.
