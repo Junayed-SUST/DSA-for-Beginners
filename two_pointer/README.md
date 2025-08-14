@@ -34,7 +34,7 @@ Given a sorted array of integers and a target value, find the indices (1-based) 
 ```plaintext
 numbers = [2, 7, 11, 15], target = 9
 **Output**:
-```plaintext
+
 [1, 2]
 Explanation:
 2 + 7 = 9, and those are at indices 1 and 2 (1-based).
