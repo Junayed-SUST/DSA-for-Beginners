@@ -1,1 +1,45 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define pb push_back
+#define MOD 1000000007
+const ll inf = (1e9) + 5;
+#define junayed()                     \
+    ios_base::sync_with_stdio(false); \
+    cin.tie(NULL);
+/*
+    “ Remember, Red, hope is a good thing, maybe the best of things, and no good thing ever dies.
+    I will be hoping that this letter finds you, and finds you well.”
+*/
 
+int main()
+{
+    junayed();
+    ll n,i,target;
+    cout<<"Enter the total element and target sum"<<endl;
+    cin>>n>>target;
+    ll arr[n];
+    for(i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    ll low=0,high=n-1,left=-1,right=-1;   //• Start with left at the beginning and right at the end.
+    while(low<high){
+        if(arr[low]+arr[high]==target){
+            left=low+1;
+            right=high+1;
+            break;
+        }else{
+            if(arr[low]+arr[high]>target){
+                high--;   //• If numbers[low] + numbers[high] is greter than target, move right left.
+            }else{
+                low++;   //• If it’s more, move left right
+            }
+        }
+    }
+    if(left==-1 && right==-1){
+        cout<<"Not Possible";
+    }else{
+        cout<<"[ "<<left<<" "<<right<<" ]";
+    }
+    
+}
